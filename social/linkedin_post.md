@@ -1,19 +1,16 @@
-Today I shipped **sktime Enterprise Time-Series Studio**, a research-backed Time-Series Analytics project inspired by **sktime: A Unified Interface for Machine Learning with Time Series**.
+Shipped **Telecom Outage Forecast Desk** today.
 
-        What I changed from the base research or repo:
-        1. Translate upstream time-series analytics logic into stakeholder-ready dashboards, memos, and scenario controls.
-2. Add reproducible docs, deployment-ready structure, and polished collateral for GitHub and LinkedIn.
-3. Make the core decisions easier to interpret for product, finance, and operations partners.
+This one is built around a real workflow for **Network operations and field service leaders**.
 
-I also reviewed the upstream repo and focused on gaps like: No obvious tests directory or test files detected.
+Problem:
+Telecom teams need outage-risk forecasts that translate directly into crew and SLA decisions.
 
-        Why it matters:
-        - easier to demo
-        - easier to operate
-        - easier to explain to product, analytics, and engineering teams
+What it helps decide:
+Pre-position crews and prioritize regions before service degradation worsens.
 
-        Repo: https://github.com/R-behera/sktime-enterprise-timeseries-studio
-        Paper: https://arxiv.org/abs/1909.07872
-        Screenshot: demo/screenshot.png
+Why that matters:
+Reduce outage duration and improve SLA protection.
 
-        #sktime #timeseries #analytics #forecasting #AI #MachineLearning #LLM #DataScience
+Repo: https://github.com/R-behera/sktime-enterprise-timeseries-studio
+
+#telecom #outage #forecasting #operations #AI #MachineLearning #DataScience

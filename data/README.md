@@ -1,4 +1,13 @@
+# Data notes
 
-# Data Notes
+This project is framed around `Telecom Operations`.
 
-This folder holds generated examples for sktime Enterprise Time-Series Studio. Run `python scripts/bootstrap_data.py` to create mock request and response payloads under `data/mock/`.
+## Intended inputs
+
+- Business or case context from the target user
+- Historical metrics or baseline comparisons
+- Retrieval or workflow context where relevant
+
+## Use-case reminder
+
+Telecom teams need outage-risk forecasts that translate directly into crew and SLA decisions.

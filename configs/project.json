@@ -1,70 +1,52 @@
 {
   "slug": "sktime-enterprise-timeseries-studio",
-  "title": "sktime Enterprise Time-Series Studio",
-  "project_type": "analytics",
-  "domain": "Time-Series Analytics",
-  "summary": "Create an enterprise time-series studio that blends forecasting, classification, and anomaly workflows in one coherent analyst-facing product.",
+  "title": "Telecom Outage Forecast Desk",
+  "project_type": "ml",
+  "domain": "Telecom Operations",
+  "summary": "Forecast outage risk and service degradation windows so network teams can pre-position crews and protect SLA performance.",
   "tags": [
-    "sktime",
-    "timeseries",
-    "analytics",
-    "forecasting"
+    "telecom",
+    "outage",
+    "forecasting",
+    "operations"
   ],
   "accent": "#2cc833",
   "secondary_accent": "#3ba92c",
   "dashboard_metrics": [
     {
-      "label": "North Star",
-      "value": "82",
-      "delta": "+7.1%"
+      "label": "Outage Recall",
+      "value": "88%",
+      "delta": "+5.4%"
     },
     {
-      "label": "Variance",
-      "value": "15%",
-      "delta": "-1.8%"
+      "label": "SLA Breach Rate",
+      "value": "7%",
+      "delta": "-1.7%"
     },
     {
-      "label": "Decision Cycle",
-      "value": "5d",
-      "delta": "-0.5d"
+      "label": "Crew Prep Lead",
+      "value": "5.6h",
+      "delta": "+1.4h"
     }
   ],
   "sample_features": {
-    "current_conversion": 0.18,
-    "baseline_conversion": 0.12,
-    "volume": 2975,
-    "segment": "paid_users"
+    "region": "Southwest",
+    "weather_risk": 0.66,
+    "tower_density": 118,
+    "recent_ticket_surge": 0.21,
+    "backhaul_instability": true
   },
   "sample_metrics": {
-    "acquisition": 70.3,
-    "activation": 61.5,
-    "retention": 69.6,
-    "revenue": 123.1
+    "outage_recall": 0.88,
+    "sla_breach_rate": 0.07,
+    "crew_prep_hours": 5.6,
+    "false_alarm_rate": 0.12
   },
   "knowledge_base": [
-    "sktime Enterprise Time-Series Studio is positioned as a Time-Series Analytics starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
-    "The primary value proposition is: Create an enterprise time-series studio that blends forecasting, classification, and anomaly workflows in one coherent analyst-facing product.",
-    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
-    "Typical stakeholders include analytics, operations, product, and leadership teams working on sktime, timeseries, analytics, forecasting.",
-    "Source paper: sktime: A Unified Interface for Machine Learning with Time Series",
-    "Official repo: https://github.com/sktime/sktime",
-    "Production differentiation focus: Translate upstream time-series analytics logic into stakeholder-ready dashboards, memos, and scenario controls.; Add reproducible docs, deployment-ready structure, and polished collateral for GitHub and LinkedIn.; Make the core decisions easier to interpret for product, finance, and operations partners."
-  ],
-  "research_key": "sktime-enterprise-timeseries-studio",
-  "research_score": 9.7,
-  "paper_title": "sktime: A Unified Interface for Machine Learning with Time Series",
-  "paper_url": "https://arxiv.org/abs/1909.07872",
-  "repo_url": "https://github.com/sktime/sktime",
-  "repo_org": "sktime",
-  "why_high_score": [
-    "Official or primary upstream repo with 9735 GitHub stars.",
-    "Active maintenance signal with recent push at 2026-04-15T22:55:20Z.",
-    "A unified framework for machine learning with time series"
-  ],
-  "differentiation_hooks": [
-    "Translate upstream time-series analytics logic into stakeholder-ready dashboards, memos, and scenario controls.",
-    "Add reproducible docs, deployment-ready structure, and polished collateral for GitHub and LinkedIn.",
-    "Make the core decisions easier to interpret for product, finance, and operations partners."
+    "User: telecom NOC and field service teams.",
+    "Primary pain: outage forecasts rarely map cleanly to crew staging and SLA decisions.",
+    "Decision output: regional risk alerts, crew staging, and preemptive interventions.",
+    "Business impact: fewer SLA breaches and faster outage response."
   ],
   "app_archetype": "planner",
   "ui_profile": {
@@ -80,36 +62,36 @@
   },
   "app_modules": [
     {
-      "label": "Scenario 01",
-      "title": "Forecast Input Studio",
-      "description": "Model a planning scenario from the primary business and operational levers.",
+      "label": "Telecom 01",
+      "title": "Outage Risk Intake",
+      "description": "Score the next service-risk window for a target region.",
       "endpoint": "/score",
       "input_mode": "json",
-      "cta": "Run Scenario",
-      "prefill": "{\n  \"features\": {\n    \"current_conversion\": 0.18,\n    \"baseline_conversion\": 0.12,\n    \"volume\": 2975,\n    \"segment\": \"paid_users\"\n  }\n}",
-      "hint": "Forecast confidence and planning band will appear here.",
+      "cta": "Score Region",
+      "prefill": "{\n  \"features\": {\n    \"region\": \"Southwest\",\n    \"weather_risk\": 0.66,\n    \"recent_ticket_surge\": 0.21,\n    \"backhaul_instability\": true\n  }\n}",
+      "hint": "Regional outage risk appears here.",
       "span": "normal"
     },
     {
-      "label": "Scenario 02",
-      "title": "Variance Explorer",
-      "description": "Explain how actual metrics differ from the expected planning baseline.",
+      "label": "Telecom 02",
+      "title": "SLA Delta Review",
+      "description": "Compare the current risk forecast against the last stable service baseline.",
       "endpoint": "/analyze",
       "input_mode": "json",
-      "cta": "Analyze Variance",
-      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 70.3,\n    \"activation\": 61.5,\n    \"retention\": 69.6,\n    \"revenue\": 123.1\n  },\n  \"baseline\": {\n    \"acquisition\": 64.68,\n    \"activation\": 56.58,\n    \"retention\": 64.03,\n    \"revenue\": 113.25\n  }\n}",
-      "hint": "Variance summary and largest movement will appear here.",
+      "cta": "Review SLA Risk",
+      "prefill": "{\n  \"metrics\": {\n    \"outage_recall\": 88.0,\n    \"sla_breach_rate\": 7.0,\n    \"false_alarm_rate\": 12.0\n  },\n  \"baseline\": {\n    \"outage_recall\": 82.6,\n    \"sla_breach_rate\": 8.7,\n    \"false_alarm_rate\": 14.8\n  }\n}",
+      "hint": "SLA risk delta appears here.",
       "span": "wide"
     },
     {
-      "label": "Scenario 03",
-      "title": "Planning Memo",
-      "description": "Turn raw scenario inputs into a concise operational recommendation.",
+      "label": "Telecom 03",
+      "title": "Crew Deployment Note",
+      "description": "Generate the pre-storm deployment note for field operations leaders.",
       "endpoint": "/recommend",
       "input_mode": "json",
-      "cta": "Draft Memo",
-      "prefill": "{\n  \"prompt\": \"Recommend the next best action for sktime Enterprise Time-Series Studio.\",\n  \"features\": {\n    \"current_conversion\": 0.18,\n    \"baseline_conversion\": 0.12,\n    \"volume\": 2975,\n    \"segment\": \"paid_users\"\n  },\n  \"metrics\": {\n    \"acquisition\": 70.3,\n    \"activation\": 61.5,\n    \"retention\": 69.6,\n    \"revenue\": 123.1\n  }\n}",
-      "hint": "Decision memo and next steps will appear here.",
+      "cta": "Draft Note",
+      "prefill": "{\n  \"prompt\": \"Write the crew staging note for the Southwest outage risk window.\",\n  \"features\": {\n    \"region\": \"Southwest\",\n    \"weather_risk\": 0.66\n  },\n  \"metrics\": {\n    \"sla_breach_rate\": 0.07,\n    \"crew_prep_hours\": 5.6\n  }\n}",
+      "hint": "Deployment note appears here.",
       "span": "normal"
     }
   ]

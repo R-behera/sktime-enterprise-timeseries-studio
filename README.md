@@ -1,19 +1,37 @@
-
-# sktime Enterprise Time-Series Studio
+# Telecom Outage Forecast Desk
 
 ![Demo Screenshot](demo/screenshot.png)
 
 ## Overview
-Create an enterprise time-series studio that blends forecasting, classification, and anomaly workflows in one coherent analyst-facing product.
 
-This project is part of a 50-project portfolio covering data science, AI, LLM, RAG, and product analytics use cases across finance, health, retail, cybersecurity, developer tools, and enterprise workflows.
+Forecast outage risk and service degradation windows so network teams can pre-position crews and protect SLA performance.
 
-## Project Profile
-- Domain: Time-Series Analytics
-- Project type: `analytics`
-- Tags: sktime, timeseries, analytics, forecasting
+## Real-world problem
 
-## Quick Start
+- User: Network operations and field service leaders
+- Problem: Telecom teams need outage-risk forecasts that translate directly into crew and SLA decisions.
+- Decision improved: Pre-position crews and prioritize regions before service degradation worsens.
+- KPI target: Reduce outage duration and improve SLA protection.
+
+## Why this matters
+
+This repo is positioned as a real product for a real team, not a framework-only demo. The goal is to show how research-backed AI, analytics, or graph systems become deployable workflows with docs, UI, screenshots, and business-facing outputs.
+
+## Project profile
+
+- Domain: Telecom Operations
+- Project type: `ml`
+- Tags: telecom, outage, forecasting, operations
+
+## Workflow
+
+1. Ingest the operational context for the user and case.
+2. Score risk, quality, or opportunity using the project API.
+3. Compare current signals against a business baseline.
+4. Generate a recommendation or operator brief for the next step.
+
+## Quick start
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate
@@ -24,7 +42,8 @@ uvicorn src.app.main:app --host 0.0.0.0 --port 8000 --reload
 
 Open `http://localhost:8000/` to use the interactive application.
 
-## Key Endpoints
+## Key endpoints
+
 - `GET /`
 - `GET /health`
 - `GET /bootstrap`
@@ -34,19 +53,10 @@ Open `http://localhost:8000/` to use the interactive application.
 - `POST /query`
 - `POST /recommend`
 
-## Structure
-```text
-sktime-enterprise-timeseries-studio/
-|- configs/
-|- data/
-|- demo/
-|- docs/
-|- scripts/
-|- src/app/
-|- src/app/web/
-|- tests/
-|- .github/workflows/
-|- Dockerfile
-|- docker-compose.yml
-|- Makefile
-```
+## Documentation
+
+- [Architecture](docs/architecture.md)
+- [Evaluation](docs/evaluation.md)
+- [Runbook](docs/runbook.md)
+- [Innovation memo](research/innovation_memo.md)
+- [Upstream audit](research/upstream_audit.md)

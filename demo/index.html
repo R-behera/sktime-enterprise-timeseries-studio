@@ -4,7 +4,7 @@
         <head>
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>sktime Enterprise Time-Series Studio</title>
+          <title>Telecom Outage Forecast Desk</title>
           <link rel="stylesheet" href="./styles.css">
         </head>
         <body class="surface-mist">
@@ -12,101 +12,95 @@
             <section class="hero">
               <div class="panel hero-copy">
                 <span class="eyebrow" data-health>Planning Workspace</span>
-                <h1 id="project-title">sktime Enterprise Time-Series Studio</h1>
-                <p id="project-summary" class="lead">Create an enterprise time-series studio that blends forecasting, classification, and anomaly workflows in one coherent analyst-facing product.</p>
+                <h1 id="project-title">Telecom Outage Forecast Desk</h1>
+                <p id="project-summary" class="lead">Forecast outage risk and service degradation windows so network teams can pre-position crews and protect SLA performance.</p>
                 <ul id="project-tags" class="tag-list">
-                  <li>sktime</li><li>timeseries</li><li>analytics</li><li>forecasting</li>
+                  <li>telecom</li><li>outage</li><li>forecasting</li><li>operations</li>
                 </ul>
               </div>
               <div class="panel hero-side">
                 <div class="metric-grid">
-                  <article class='card'><span>North Star</span><strong>82</strong><em>+7.1%</em></article>
-<article class='card'><span>Variance</span><strong>15%</strong><em>-1.8%</em></article>
-<article class='card'><span>Decision Cycle</span><strong>5d</strong><em>-0.5d</em></article>
+                  <article class='card'><span>Outage Recall</span><strong>88%</strong><em>+5.4%</em></article>
+<article class='card'><span>SLA Breach Rate</span><strong>7%</strong><em>-1.7%</em></article>
+<article class='card'><span>Crew Prep Lead</span><strong>5.6h</strong><em>+1.4h</em></article>
                 </div>
                 <div class="mini-grid">
-                  <article class='mini-card'><span>Project Type</span><strong>ANALYTICS</strong></article><article class='mini-card'><span>Domain</span><strong>Time-Series Analytics</strong></article><article class='mini-card'><span>Application</span><strong>Planning Workspace</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
+                  <article class='mini-card'><span>Project Type</span><strong>ML</strong></article><article class='mini-card'><span>Domain</span><strong>Telecom Operations</strong></article><article class='mini-card'><span>Application</span><strong>Planning Workspace</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
                 </div>
               </div>
             </section>
             <section class="app-grid">
               <article class="panel module js-module span-normal">
           <div class="module-header">
-            <span>Scenario 01</span>
-            <h2>Forecast Input Studio</h2>
-            <p>Model a planning scenario from the primary business and operational levers.</p>
+            <span>Telecom 01</span>
+            <h2>Outage Risk Intake</h2>
+            <p>Score the next service-risk window for a target region.</p>
           </div>
           <textarea class="js-input">{
   &quot;features&quot;: {
-    &quot;current_conversion&quot;: 0.18,
-    &quot;baseline_conversion&quot;: 0.12,
-    &quot;volume&quot;: 2975,
-    &quot;segment&quot;: &quot;paid_users&quot;
+    &quot;region&quot;: &quot;Southwest&quot;,
+    &quot;weather_risk&quot;: 0.66,
+    &quot;recent_ticket_surge&quot;: 0.21,
+    &quot;backhaul_instability&quot;: true
   }
 }</textarea>
           <div class="button-row">
-            <button class="js-run" data-endpoint="/score" data-input-mode="json">Run Scenario</button>
+            <button class="js-run" data-endpoint="/score" data-input-mode="json">Score Region</button>
           </div>
-          <pre class="js-output">Forecast confidence and planning band will appear here.</pre>
+          <pre class="js-output">Regional outage risk appears here.</pre>
         </article>
 <article class="panel module js-module span-wide">
           <div class="module-header">
-            <span>Scenario 02</span>
-            <h2>Variance Explorer</h2>
-            <p>Explain how actual metrics differ from the expected planning baseline.</p>
+            <span>Telecom 02</span>
+            <h2>SLA Delta Review</h2>
+            <p>Compare the current risk forecast against the last stable service baseline.</p>
           </div>
           <textarea class="js-input">{
   &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 70.3,
-    &quot;activation&quot;: 61.5,
-    &quot;retention&quot;: 69.6,
-    &quot;revenue&quot;: 123.1
+    &quot;outage_recall&quot;: 88.0,
+    &quot;sla_breach_rate&quot;: 7.0,
+    &quot;false_alarm_rate&quot;: 12.0
   },
   &quot;baseline&quot;: {
-    &quot;acquisition&quot;: 64.68,
-    &quot;activation&quot;: 56.58,
-    &quot;retention&quot;: 64.03,
-    &quot;revenue&quot;: 113.25
+    &quot;outage_recall&quot;: 82.6,
+    &quot;sla_breach_rate&quot;: 8.7,
+    &quot;false_alarm_rate&quot;: 14.8
   }
 }</textarea>
           <div class="button-row">
-            <button class="js-run" data-endpoint="/analyze" data-input-mode="json">Analyze Variance</button>
+            <button class="js-run" data-endpoint="/analyze" data-input-mode="json">Review SLA Risk</button>
           </div>
-          <pre class="js-output">Variance summary and largest movement will appear here.</pre>
+          <pre class="js-output">SLA risk delta appears here.</pre>
         </article>
 <article class="panel module js-module span-normal">
           <div class="module-header">
-            <span>Scenario 03</span>
-            <h2>Planning Memo</h2>
-            <p>Turn raw scenario inputs into a concise operational recommendation.</p>
+            <span>Telecom 03</span>
+            <h2>Crew Deployment Note</h2>
+            <p>Generate the pre-storm deployment note for field operations leaders.</p>
           </div>
           <textarea class="js-input">{
-  &quot;prompt&quot;: &quot;Recommend the next best action for sktime Enterprise Time-Series Studio.&quot;,
+  &quot;prompt&quot;: &quot;Write the crew staging note for the Southwest outage risk window.&quot;,
   &quot;features&quot;: {
-    &quot;current_conversion&quot;: 0.18,
-    &quot;baseline_conversion&quot;: 0.12,
-    &quot;volume&quot;: 2975,
-    &quot;segment&quot;: &quot;paid_users&quot;
+    &quot;region&quot;: &quot;Southwest&quot;,
+    &quot;weather_risk&quot;: 0.66
   },
   &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 70.3,
-    &quot;activation&quot;: 61.5,
-    &quot;retention&quot;: 69.6,
-    &quot;revenue&quot;: 123.1
+    &quot;sla_breach_rate&quot;: 0.07,
+    &quot;crew_prep_hours&quot;: 5.6
   }
 }</textarea>
           <div class="button-row">
-            <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Draft Memo</button>
+            <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Draft Note</button>
           </div>
-          <pre class="js-output">Decision memo and next steps will appear here.</pre>
+          <pre class="js-output">Deployment note appears here.</pre>
         </article>
             </section>
             <footer class="footer">
-              <span>Time-Series Analytics • ANALYTICS • Planning Workspace</span>
+              <span>Telecom Operations • ML • Planning Workspace</span>
               <span>sktime-enterprise-timeseries-studio</span>
             </footer>
           </div>
-          <script id="bootstrap-data" type="application/json">{"project": {"slug": "sktime-enterprise-timeseries-studio", "title": "sktime Enterprise Time-Series Studio", "project_type": "analytics", "domain": "Time-Series Analytics", "summary": "Create an enterprise time-series studio that blends forecasting, classification, and anomaly workflows in one coherent analyst-facing product.", "tags": ["sktime", "timeseries", "analytics", "forecasting"]}, "app_archetype": "planner", "ui_profile": {"layout": "board", "surface": "mist", "font_stack": "\"DM Sans\", \"Segoe UI\", sans-serif", "radius": 23, "shadow": 53, "eyebrow_style": "soft", "module_columns": 3, "hero_align": "left", "headline_mode": "compact"}, "app_modules": [{"label": "Scenario 01", "title": "Forecast Input Studio", "description": "Model a planning scenario from the primary business and operational levers.", "endpoint": "/score", "input_mode": "json", "cta": "Run Scenario", "prefill": "{\n  \"features\": {\n    \"current_conversion\": 0.18,\n    \"baseline_conversion\": 0.12,\n    \"volume\": 2975,\n    \"segment\": \"paid_users\"\n  }\n}", "hint": "Forecast confidence and planning band will appear here.", "span": "normal"}, {"label": "Scenario 02", "title": "Variance Explorer", "description": "Explain how actual metrics differ from the expected planning baseline.", "endpoint": "/analyze", "input_mode": "json", "cta": "Analyze Variance", "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 70.3,\n    \"activation\": 61.5,\n    \"retention\": 69.6,\n    \"revenue\": 123.1\n  },\n  \"baseline\": {\n    \"acquisition\": 64.68,\n    \"activation\": 56.58,\n    \"retention\": 64.03,\n    \"revenue\": 113.25\n  }\n}", "hint": "Variance summary and largest movement will appear here.", "span": "wide"}, {"label": "Scenario 03", "title": "Planning Memo", "description": "Turn raw scenario inputs into a concise operational recommendation.", "endpoint": "/recommend", "input_mode": "json", "cta": "Draft Memo", "prefill": "{\n  \"prompt\": \"Recommend the next best action for sktime Enterprise Time-Series Studio.\",\n  \"features\": {\n    \"current_conversion\": 0.18,\n    \"baseline_conversion\": 0.12,\n    \"volume\": 2975,\n    \"segment\": \"paid_users\"\n  },\n  \"metrics\": {\n    \"acquisition\": 70.3,\n    \"activation\": 61.5,\n    \"retention\": 69.6,\n    \"revenue\": 123.1\n  }\n}", "hint": "Decision memo and next steps will appear here.", "span": "normal"}], "sample_features": {"current_conversion": 0.18, "baseline_conversion": 0.12, "volume": 2975, "segment": "paid_users"}, "sample_metrics": {"acquisition": 70.3, "activation": 61.5, "retention": 69.6, "revenue": 123.1}, "knowledge_base": ["sktime Enterprise Time-Series Studio is positioned as a Time-Series Analytics starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Create an enterprise time-series studio that blends forecasting, classification, and anomaly workflows in one coherent analyst-facing product.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on sktime, timeseries, analytics, forecasting.", "Source paper: sktime: A Unified Interface for Machine Learning with Time Series", "Official repo: https://github.com/sktime/sktime", "Production differentiation focus: Translate upstream time-series analytics logic into stakeholder-ready dashboards, memos, and scenario controls.; Add reproducible docs, deployment-ready structure, and polished collateral for GitHub and LinkedIn.; Make the core decisions easier to interpret for product, finance, and operations partners."], "dashboard_metrics": [{"label": "North Star", "value": "82", "delta": "+7.1%"}, {"label": "Variance", "value": "15%", "delta": "-1.8%"}, {"label": "Decision Cycle", "value": "5d", "delta": "-0.5d"}]}</script>
+          <script id="bootstrap-data" type="application/json">{"project": {"slug": "sktime-enterprise-timeseries-studio", "title": "Telecom Outage Forecast Desk", "project_type": "ml", "domain": "Telecom Operations", "summary": "Forecast outage risk and service degradation windows so network teams can pre-position crews and protect SLA performance.", "tags": ["telecom", "outage", "forecasting", "operations"]}, "app_archetype": "planner", "ui_profile": {"layout": "board", "surface": "mist", "font_stack": "\"DM Sans\", \"Segoe UI\", sans-serif", "radius": 23, "shadow": 53, "eyebrow_style": "soft", "module_columns": 3, "hero_align": "left", "headline_mode": "compact"}, "app_modules": [{"label": "Telecom 01", "title": "Outage Risk Intake", "description": "Score the next service-risk window for a target region.", "endpoint": "/score", "input_mode": "json", "cta": "Score Region", "prefill": "{\n  \"features\": {\n    \"region\": \"Southwest\",\n    \"weather_risk\": 0.66,\n    \"recent_ticket_surge\": 0.21,\n    \"backhaul_instability\": true\n  }\n}", "hint": "Regional outage risk appears here.", "span": "normal"}, {"label": "Telecom 02", "title": "SLA Delta Review", "description": "Compare the current risk forecast against the last stable service baseline.", "endpoint": "/analyze", "input_mode": "json", "cta": "Review SLA Risk", "prefill": "{\n  \"metrics\": {\n    \"outage_recall\": 88.0,\n    \"sla_breach_rate\": 7.0,\n    \"false_alarm_rate\": 12.0\n  },\n  \"baseline\": {\n    \"outage_recall\": 82.6,\n    \"sla_breach_rate\": 8.7,\n    \"false_alarm_rate\": 14.8\n  }\n}", "hint": "SLA risk delta appears here.", "span": "wide"}, {"label": "Telecom 03", "title": "Crew Deployment Note", "description": "Generate the pre-storm deployment note for field operations leaders.", "endpoint": "/recommend", "input_mode": "json", "cta": "Draft Note", "prefill": "{\n  \"prompt\": \"Write the crew staging note for the Southwest outage risk window.\",\n  \"features\": {\n    \"region\": \"Southwest\",\n    \"weather_risk\": 0.66\n  },\n  \"metrics\": {\n    \"sla_breach_rate\": 0.07,\n    \"crew_prep_hours\": 5.6\n  }\n}", "hint": "Deployment note appears here.", "span": "normal"}], "sample_features": {"region": "Southwest", "weather_risk": 0.66, "tower_density": 118, "recent_ticket_surge": 0.21, "backhaul_instability": true}, "sample_metrics": {"outage_recall": 0.88, "sla_breach_rate": 0.07, "crew_prep_hours": 5.6, "false_alarm_rate": 0.12}, "knowledge_base": ["User: telecom NOC and field service teams.", "Primary pain: outage forecasts rarely map cleanly to crew staging and SLA decisions.", "Decision output: regional risk alerts, crew staging, and preemptive interventions.", "Business impact: fewer SLA breaches and faster outage response."], "dashboard_metrics": [{"label": "Outage Recall", "value": "88%", "delta": "+5.4%"}, {"label": "SLA Breach Rate", "value": "7%", "delta": "-1.7%"}, {"label": "Crew Prep Lead", "value": "5.6h", "delta": "+1.4h"}]}</script>
           <script src="./app.js"></script>
         </body>
         </html>
