@@ -1,0 +1,95 @@
+{
+  "upstream": {
+    "owner": "sktime",
+    "repo": "sktime",
+    "source_url": "https://github.com/sktime/sktime",
+    "local_path": "/Users/Rb/Documents/LLM based projects /sources/sktime__sktime",
+    "branch": "main",
+    "default_branch": "main",
+    "commit": "41a69e5945c660b011ad9a3a057257cd5b906667",
+    "fork_requested": false,
+    "fork_result": ""
+  },
+  "audit": {
+    "file_count": 1873,
+    "text_file_count": 1639,
+    "top_suffixes": [
+      [
+        ".py",
+        1569
+      ],
+      [
+        ".rst",
+        72
+      ],
+      [
+        ".png",
+        58
+      ],
+      [
+        ".ipynb",
+        43
+      ],
+      [
+        ".md",
+        23
+      ],
+      [
+        ".ts",
+        22
+      ],
+      [
+        ".yml",
+        18
+      ],
+      [
+        ".csv",
+        12
+      ]
+    ],
+    "style_counts": {
+      "other": 437,
+      "hidden": 9,
+      "PascalCase": 34,
+      "snake_case": 1371,
+      "kebab-case": 22
+    },
+    "token_hits": {
+      "TODO": [
+        "extension_templates/catalogue.py",
+        "docs/source/estimator_overview.md",
+        "sktime/datatypes/_vectorize.py",
+        "sktime/datasets/_single_problem_loaders.py",
+        "sktime/tests/test_all_estimators.py",
+        "sktime/utils/mlflow_sktime.py",
+        "sktime/utils/_estimator_html_repr.py",
+        "sktime/networks/cnn.py"
+      ],
+      "FIXME": [
+        "docs/source/conf.py"
+      ]
+    },
+    "findings": [
+      "No obvious tests directory or test files detected.",
+      "No container packaging signal detected, which makes demos and deployment less portable.",
+      "Mixed filename conventions detected: PascalCase, kebab-case, snake_case.",
+      "Open maintenance markers detected: FIXME in 1 file(s), TODO in 60 file(s).",
+      "Large files that may benefit from decomposition: sktime/registry/_tags.py (3834 lines), sktime/forecasting/base/_base.py (3437 lines), sktime/forecasting/compose/_reduce.py (3120 lines).",
+      "Notebook-heavy repo without an obvious matching test surface."
+    ],
+    "strengths": [
+      "Repository has a top-level README.",
+      "Repository exposes a dedicated docs surface.",
+      "Repository has GitHub Actions or another CI entry point."
+    ],
+    "largest_files": [
+      "sktime/registry/_tags.py (3834 lines)",
+      "sktime/forecasting/base/_base.py (3437 lines)",
+      "sktime/forecasting/compose/_reduce.py (3120 lines)"
+    ],
+    "has_tests": false,
+    "has_docs": true,
+    "has_ci": true,
+    "has_docker": false
+  }
+}

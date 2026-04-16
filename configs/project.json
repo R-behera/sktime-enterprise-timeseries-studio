@@ -1,0 +1,116 @@
+{
+  "slug": "sktime-enterprise-timeseries-studio",
+  "title": "sktime Enterprise Time-Series Studio",
+  "project_type": "analytics",
+  "domain": "Time-Series Analytics",
+  "summary": "Create an enterprise time-series studio that blends forecasting, classification, and anomaly workflows in one coherent analyst-facing product.",
+  "tags": [
+    "sktime",
+    "timeseries",
+    "analytics",
+    "forecasting"
+  ],
+  "accent": "#2cc833",
+  "secondary_accent": "#3ba92c",
+  "dashboard_metrics": [
+    {
+      "label": "North Star",
+      "value": "82",
+      "delta": "+7.1%"
+    },
+    {
+      "label": "Variance",
+      "value": "15%",
+      "delta": "-1.8%"
+    },
+    {
+      "label": "Decision Cycle",
+      "value": "5d",
+      "delta": "-0.5d"
+    }
+  ],
+  "sample_features": {
+    "current_conversion": 0.18,
+    "baseline_conversion": 0.12,
+    "volume": 2975,
+    "segment": "paid_users"
+  },
+  "sample_metrics": {
+    "acquisition": 70.3,
+    "activation": 61.5,
+    "retention": 69.6,
+    "revenue": 123.1
+  },
+  "knowledge_base": [
+    "sktime Enterprise Time-Series Studio is positioned as a Time-Series Analytics starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Create an enterprise time-series studio that blends forecasting, classification, and anomaly workflows in one coherent analyst-facing product.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on sktime, timeseries, analytics, forecasting.",
+    "Source paper: sktime: A Unified Interface for Machine Learning with Time Series",
+    "Official repo: https://github.com/sktime/sktime",
+    "Production differentiation focus: Translate upstream time-series analytics logic into stakeholder-ready dashboards, memos, and scenario controls.; Add reproducible docs, deployment-ready structure, and polished collateral for GitHub and LinkedIn.; Make the core decisions easier to interpret for product, finance, and operations partners."
+  ],
+  "research_key": "sktime-enterprise-timeseries-studio",
+  "research_score": 9.7,
+  "paper_title": "sktime: A Unified Interface for Machine Learning with Time Series",
+  "paper_url": "https://arxiv.org/abs/1909.07872",
+  "repo_url": "https://github.com/sktime/sktime",
+  "repo_org": "sktime",
+  "why_high_score": [
+    "Official or primary upstream repo with 9735 GitHub stars.",
+    "Active maintenance signal with recent push at 2026-04-15T22:55:20Z.",
+    "A unified framework for machine learning with time series"
+  ],
+  "differentiation_hooks": [
+    "Translate upstream time-series analytics logic into stakeholder-ready dashboards, memos, and scenario controls.",
+    "Add reproducible docs, deployment-ready structure, and polished collateral for GitHub and LinkedIn.",
+    "Make the core decisions easier to interpret for product, finance, and operations partners."
+  ],
+  "app_archetype": "planner",
+  "ui_profile": {
+    "layout": "board",
+    "surface": "mist",
+    "font_stack": "\"DM Sans\", \"Segoe UI\", sans-serif",
+    "radius": 23,
+    "shadow": 53,
+    "eyebrow_style": "soft",
+    "module_columns": 3,
+    "hero_align": "left",
+    "headline_mode": "compact"
+  },
+  "app_modules": [
+    {
+      "label": "Scenario 01",
+      "title": "Forecast Input Studio",
+      "description": "Model a planning scenario from the primary business and operational levers.",
+      "endpoint": "/score",
+      "input_mode": "json",
+      "cta": "Run Scenario",
+      "prefill": "{\n  \"features\": {\n    \"current_conversion\": 0.18,\n    \"baseline_conversion\": 0.12,\n    \"volume\": 2975,\n    \"segment\": \"paid_users\"\n  }\n}",
+      "hint": "Forecast confidence and planning band will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Scenario 02",
+      "title": "Variance Explorer",
+      "description": "Explain how actual metrics differ from the expected planning baseline.",
+      "endpoint": "/analyze",
+      "input_mode": "json",
+      "cta": "Analyze Variance",
+      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 70.3,\n    \"activation\": 61.5,\n    \"retention\": 69.6,\n    \"revenue\": 123.1\n  },\n  \"baseline\": {\n    \"acquisition\": 64.68,\n    \"activation\": 56.58,\n    \"retention\": 64.03,\n    \"revenue\": 113.25\n  }\n}",
+      "hint": "Variance summary and largest movement will appear here.",
+      "span": "wide"
+    },
+    {
+      "label": "Scenario 03",
+      "title": "Planning Memo",
+      "description": "Turn raw scenario inputs into a concise operational recommendation.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Draft Memo",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for sktime Enterprise Time-Series Studio.\",\n  \"features\": {\n    \"current_conversion\": 0.18,\n    \"baseline_conversion\": 0.12,\n    \"volume\": 2975,\n    \"segment\": \"paid_users\"\n  },\n  \"metrics\": {\n    \"acquisition\": 70.3,\n    \"activation\": 61.5,\n    \"retention\": 69.6,\n    \"revenue\": 123.1\n  }\n}",
+      "hint": "Decision memo and next steps will appear here.",
+      "span": "normal"
+    }
+  ]
+}
