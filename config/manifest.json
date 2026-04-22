@@ -1,0 +1,89 @@
+{
+  "slug": "sktime-enterprise-timeseries-studio",
+  "title": "Telecom Outage Forecast Desk",
+  "summary": "![Demo Screenshot](demo/screenshot.png)",
+  "domain": "Forecasting and planning",
+  "audience": "operations planner",
+  "promise": "Make planning models legible to the teams who act on the forecast.",
+  "hero": [
+    "Production-grade app scaffold with API, CI, tests, Docker, and GitHub Pages landing.",
+    "3D landing surface designed for GitHub Pages and recruiter-friendly storytelling.",
+    "App backend structured for local or container deployment without changing the product narrative."
+  ],
+  "kpis": [
+    {
+      "label": "Workflow clarity",
+      "value": "90%",
+      "note": "Operator actions mapped to product stages"
+    },
+    {
+      "label": "Deployment posture",
+      "value": "API + Docker",
+      "note": "Local and containerized startup paths"
+    },
+    {
+      "label": "Presentation layer",
+      "value": "3D Pages ready",
+      "note": "Static GitHub landing page included"
+    }
+  ],
+  "stages": [
+    "ingest",
+    "validate",
+    "analyze",
+    "decide",
+    "monitor"
+  ],
+  "cards": [
+    {
+      "title": "Operator cockpit",
+      "body": "One-screen surface for the operations planner to understand what matters first."
+    },
+    {
+      "title": "API contract",
+      "body": "Structured endpoints for health, manifest, readiness, and showcase data."
+    },
+    {
+      "title": "Deployment path",
+      "body": "Repository includes Docker, Compose, CI workflow, and a Pages-ready landing surface."
+    }
+  ],
+  "scene": "depth-columns",
+  "theme": {
+    "bg": "#0c0812",
+    "surface": "#171022",
+    "ink": "#f5f0ff",
+    "muted": "#a99bc2",
+    "accent": "#c38fff",
+    "accent2": "#6cf0ff"
+  },
+  "pages_url": "https://r-behera.github.io/sktime-enterprise-timeseries-studio/",
+  "api_examples": {
+    "health": {
+      "status": "ok",
+      "project": "sktime-enterprise-timeseries-studio"
+    },
+    "readiness": {
+      "api": "ready",
+      "landing_page": "docs/index.html",
+      "container": "Dockerfile present"
+    },
+    "signals": [
+      {
+        "name": "Decision coverage",
+        "status": "strong",
+        "detail": "App and landing narrative aligned"
+      },
+      {
+        "name": "Operator context",
+        "status": "strong",
+        "detail": "Primary user anchored as operations planner"
+      },
+      {
+        "name": "Delivery path",
+        "status": "ready",
+        "detail": "Pages + containerized app scaffold generated"
+      }
+    ]
+  }
+}
